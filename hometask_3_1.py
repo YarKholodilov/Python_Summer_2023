@@ -4,6 +4,6 @@ count = 0
 while salary != 0:
    salary_total += salary
    count += 1
-   salary = int(input())
+   salary = float(input())
 
 print(salary_total/count)
