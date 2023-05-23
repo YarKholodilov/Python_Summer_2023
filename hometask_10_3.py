@@ -10,7 +10,7 @@ for i in range(1, wb['production'].max_row + 1):
 wb.create_sheet('analysis')
 wb.active = wb['analysis']
 
-wb['analysis'].cell(1, 1).value = 'Миниальное значение:'
+wb['analysis'].cell(1, 1).value = 'Минимальное значение:'
 wb['analysis'].cell(1, 2).value = min(efficiency)
 wb['analysis'].cell(2, 1).value = 'Максимальное значение:'
 wb['analysis'].cell(2, 2).value = max(efficiency)
