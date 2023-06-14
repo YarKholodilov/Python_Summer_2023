@@ -35,7 +35,7 @@ class Tutor:
             for k in range(len(t)):
                 if t[1] == 'waiting approve' and t[0] == subject and decision == True:
                     t[1] = 'accept'
-                    print('Dear', student.name,', goog job!')
+                    print('Dear', student.name,', good job!')
                     print()
                 elif t[1] == 'waiting approve' and t[0] == subject and decision == False:
                     t[1] = 'not accept'
