@@ -42,14 +42,14 @@ class Tutor:
                     print('Dear', student.name,', please try again!')
                     print()
 
-    def get_journal():    # Вывести сводный журнал по всем ученикам
+    def get_journal(self):    # Вывести сводный журнал по всем ученикам
         print("   TUTOR's JOURNAL:  ")
         print("The tutor has next students, hometasks and student's progress:")
         for i in range(len(Tutor.students)):
             print(*Tutor.students[i], sep=', ')
         print('    ---    ')
 
-    def course_information():   # Информация о курсе
+    def course_information(self):   # Информация о курсе
         print('   /////')
         print('In this course we will study next subjects:')
         print('OOP,', 'Procedure approach,', 'Dynamic approach,', 'Project management,', 'Final project')
@@ -89,7 +89,7 @@ class Student:
 
 yar = Student('Yaroslav')
 peter = Student('Peter')
-Tutor.course_information()
+Tutor.course_information(Tutor)
 Tutor.set_hometask(peter, 'Final project', 'sent')
 Tutor.set_hometask(yar, 'OOP', 'sent')
 Tutor.set_hometask(yar, 'Project management', 'sent')
@@ -99,5 +99,5 @@ peter.solve('Final project')
 yar.get_info_progress()
 Tutor.check_hometask(yar,'Project management', True)
 Tutor.check_hometask(peter,'Final project', False)
-Tutor.get_journal()
+Tutor.get_journal(Tutor)
 peter.get_info_progress()
