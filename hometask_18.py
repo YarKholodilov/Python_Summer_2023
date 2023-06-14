@@ -25,7 +25,7 @@ class Tutor:
         return Tutor.students.append([student.name, subject, status])
 
     def check_hometask(student, subject, decision: bool):    # Учитель проверяет ДЗ, если правильно, то True, иначе False
-        for i in Tutor.students:             # вносится измениние в журнал учителя
+        for i in Tutor.students:             # вносится изменение в журнал учителя
             for j in range(len(i)):
                 if i[0] == student.name and i[1] == subject and i[2] == 'waiting approve' and decision == True:
                     i[2] = 'accept'
@@ -70,7 +70,7 @@ class Student:
                     print(f"Dear Tutor, could you please check my hometask: {i[0]}. Best regards,", self.name)
                     print(f"{self.name}'s hometask: {i[0]} {i[1]} by tutor.")
                     print()
-        for i in Tutor.students:       # вносится измениние в журнал учителя
+        for i in Tutor.students:       # вносится изменение в журнал учителя
             for j in range(len(i)):
                 if i[0] == self.name and i[1] == subject and i[2] == ('sent' or 'not accept'):
                     i[2] = 'waiting approve'
